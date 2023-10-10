@@ -1,52 +1,86 @@
+/* Estilos generales para el cuerpo de la página */
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #0f2027;
-    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0f2027;
+  background: linear-gradient(
+    to bottom,
+    #F5d7db,
+    #f1916D,
+    #bd83b8,
+    #473e66,
+    #1b3358,
+    #06142e
+  );
+  overflow: hidden;
+  position: relative; /* Agregado: Posición relativa para que los elementos absolutos se posicionen respecto a este */
+}
+
+/* Estilos para el contenedor del carrusel de imágenes */
+.carrusel {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: slid 40s linear infinite;
+  z-index: 1; /* Agregado: Asegura que el carrusel esté en la capa superior */
+}
+
+/* Estilos para cada elemento (imagen) del carrusel */
+.carrusel span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+
+/* Estilos para las imágenes dentro de cada elemento del carrusel */
+.carrusel span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 1.5s;
+  user-select: none; /* Evita la selección de texto en la imagen */
+  pointer-events: none; /* Evita eventos del ratón en la imagen */
+}
+
+/* Efecto de escala y translación en la imagen al pasar el ratón por encima */
+.carrusel span:hover img {
+  transform: translateY(-20px) scale(1.2); /* Ajustado el translateY */
+}
+
+/* Animación para rotar el carrusel en 360 grados */
+@keyframes slid {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
   }
-  .scope {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-    animation: slid 30s linear infinite;
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
   }
-  
-  .scope span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
-  }
-  .scope span img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: 2s;
-  }
-  .scope span:hover img {
-    transform: translateY(-50px) scale(1.7);
-  }
-  @keyframes slid {
-    0% {
-      transform: perspective(1000px) rotateY(0deg);
-    }
-    100% {
-      transform: perspective(1000px) rotateY(360deg);
-    }
-  }
-  
+}
+
+/* Estilos para el título */
+#Texto1 {
+  position: absolute;
+  top: 80px; /* Ajusta la distancia desde la parte superior según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(  #1b3358); /* Cambiado: Texto en blanco para mayor visibilidad */
+  font-size: 30px; /* Cambiado: Tamaño de fuente ajustado */
+  z-index: 2; /* Asegura que el texto esté en una capa superior que el carrusel */
+  border: 1px solid #06142e; /* Agregado: Borde de 1 píxel sólido de color blanco */
+  padding: 5px; /* Agregado: Espaciado interno para mejorar la apariencia */
+}
