@@ -54,7 +54,7 @@ body {
   object-fit: cover;
   transition: 1.5s;
   user-select: none;
-  pointer-events: none;
+  /*pointer-events: none;*/
   filter: brightness(100%) saturate(100%); /* Ajustado: Máxima calidad de imagen */
 }
 
