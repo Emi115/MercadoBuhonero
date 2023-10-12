@@ -99,3 +99,24 @@ button {
   margin-top: 20px; /* Ajustado: Agregado espacio entre el texto y el botón */
 }
 
+/* Estilos para el botón */
+button {
+  position: absolute;
+  top: 800px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff; /* Color blanco por defecto */
+  font-size: 30px;
+  z-index: 2;
+  padding: 5px;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s, font-size 0.3s;
+  text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+}
+
+/* Efecto de hover para el botón */
+button:hover {
+  color: #1b3358; /* Cambiado: Color azul al hacer hover */
+  font-size: 36px;
+  text-shadow: 0 0 20px rgba(0, 0, 255, 0.9);
+}
