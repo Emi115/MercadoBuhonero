@@ -10,8 +10,8 @@ body {
   background: #0f2027;
   background: linear-gradient(
     to bottom,
-    #F5d7db,
-    #f1916D,
+    #f5d7db,
+    #f1916d,
     #bd83b8,
     #473e66,
     #1b3358,
@@ -63,7 +63,6 @@ body {
   transform: translateY(-20px) scale(1.2);
 }
 
-
 /* Animación para rotar el carrusel en 360 grados */
 @keyframes slid {
   0% {
@@ -84,7 +83,7 @@ body {
   font-size: 30px;
   z-index: 2;
   padding: 5px;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   transition: color 0.3s, font-size 0.3s;
   text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
 }
@@ -109,7 +108,7 @@ button {
   font-size: 30px;
   z-index: 2;
   padding: 5px;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   transition: color 0.3s, font-size 0.3s;
   text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
 }
